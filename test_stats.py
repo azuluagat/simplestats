@@ -1,7 +1,7 @@
 from nose.tools import assert_equal, assert_almost_equal, assert_true, \
     assert_false, assert_raises, assert_is_instance
 
-from stats import mean, mode, std, var#, median
+from stats import mean, mode, std, var, median
 
 def test_mean1():
     obs = mean([0, 0, 0, 0])
@@ -64,4 +64,8 @@ def test_std7():
     exp = NotImplemented
     assert_equal(obs, exp)
 
+def test_median1():
+    """test median function 1 """
+    obs = median([1,3,100])
+    assert_equal(obs, 3)
 # FIXME Put Variance tests here
